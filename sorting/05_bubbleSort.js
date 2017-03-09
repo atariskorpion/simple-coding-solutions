@@ -1,4 +1,4 @@
-function insertionSort (A = []) {
+function bubbleSort (A = []) {
 
   var tempValue;
   var flag = 0;
