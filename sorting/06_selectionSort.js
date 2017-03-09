@@ -1,20 +1,20 @@
 function selectionSort (A = []) {
 
-  var tempValueIndex;
+  var valueIndex;
   var tempValue;
 
   for (i = 0; i < A.length; i++) {
-    tempValueIndex = i;
+    valueIndex = i;
 
     for (j = i+1; j < A.length; j++) {
-      if(A[j] < A[tempValueIndex]) {
-        tempValueIndex = j;
+      if(A[j] < A[valueIndex]) {
+        valueIndex = j;
       }
     }
 
     tempValue = A[i];
-    A[i] = A[tempValueIndex];
-    A[tempValueIndex] = tempValue;
+    A[i] = A[valueIndex];
+    A[valueIndex] = tempValue;
   }
 
   return A;
