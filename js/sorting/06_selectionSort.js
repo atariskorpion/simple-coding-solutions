@@ -12,10 +12,20 @@ function selectionSort (A = []) {
       }
     }
 
-    tempValue = A[i];
-    A[i] = A[valueIndex];
-    A[valueIndex] = tempValue;
+    A = swap(A, i, valueIndex);
   }
 
   return A;
 }
+
+function swap (A, i, j) {
+  let tempValue = A[i];
+
+  A[i] = A[j];
+  A[j] = tempValue;
+
+  return A;
+}
+
+const testArr = [7,3,9,1,2,10,4];
+console.log(selectionSort(testArr));
