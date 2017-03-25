@@ -26,6 +26,3 @@ function swap (A, i, j) {
 
   return A;
 }
-
-const testArr = [7,3,9,1,2,10,4];
-console.log(selectionSort(testArr));

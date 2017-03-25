@@ -1,14 +1,14 @@
-function quicksort (array, left, right) {
+function quicksort (A, left, right) {
   if (left >= right) {
     return;
   }
 
   let mid = Math.floor(left + ((right - left) / 2));
-  let pivot = array[mid];
-  let index = partition(array, left, right, pivot);
+  let pivot = A[mid];
+  let index = partition(A, left, right, pivot);
 
-  quicksort(array, left, index -1);
-  quicksort(array, index, right);
+  quicksort(A, left, index -1);
+  quicksort(A, index, right);
 }
 
 function partition (array, left, right, pivot) {
@@ -31,9 +31,11 @@ function partition (array, left, right, pivot) {
   return left;
 }
 
-function swap (array, left, right) {
-  let tempLeft = array[left];
+function swap (A, i, j) {
+  let tempValue = A[i];
 
-  array[left] = array[right];
-  array[right] = tempLeft;
+  A[i] = A[j];
+  A[j] = tempValue;
+
+  return A;
 }
