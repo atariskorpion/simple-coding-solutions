@@ -1,6 +1,9 @@
 /**
  * Example usage: binarySearchRecursive(array, 42, 0, array.length - 1)
  */
+function binarySearch(array, x) {
+  binarySearchRecursive(array, x, 0, array.length-1);
+}
 function binarySearchRecursive (array, x , left, right) {
   if (left > right) {
     return false;
