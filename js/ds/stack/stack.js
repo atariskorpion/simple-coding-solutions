@@ -25,3 +25,14 @@ class Stack {
     return this.items.length;
   }
 }
+
+function Prefixer(prefix) {
+  this.prefix = prefix;
+}
+Prefixer.prototype.prefixArray = function (arr) {
+  'use strict';
+  var that = this;
+  return arr.map(function (x) {
+    return this.prefix + x;
+  }, this);
+};
