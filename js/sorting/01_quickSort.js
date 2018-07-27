@@ -6,9 +6,11 @@ function quicksort (A, left, right) {
   let mid = Math.floor(left + ((right - left) / 2));
   let pivot = A[mid];
   let index = partition(A, left, right, pivot);
-
+  
   quicksort(A, left, index -1);
   quicksort(A, index, right);
+
+  return A;
 }
 
 function partition (array, left, right, pivot) {
@@ -39,3 +41,6 @@ function swap (A, i, j) {
 
   return A;
 }
+
+const values = [54,26,93,17,77,31,44,55,20];
+console.log(quicksort(values, 0, values.length - 1));
