@@ -47,3 +47,5 @@ function mergeSort (A = []) {
 
   return A;
 }
+
+console.log(mergeSort([17,5,12,2,20,3,7,1,0]));

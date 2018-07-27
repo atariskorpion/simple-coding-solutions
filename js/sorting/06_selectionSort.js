@@ -1,8 +1,7 @@
 function selectionSort (A = []) {
 
-  var valueIndex;
-  var tempValue;
-
+  let valueIndex;
+  
   for (i = 0; i < A.length; i++) {
     valueIndex = i;
 
@@ -26,3 +25,5 @@ function swap (A, i, j) {
 
   return A;
 }
+
+console.log(selectionSort([17,5,12,2,20,3,7,1,0]));
