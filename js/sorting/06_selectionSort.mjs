@@ -26,4 +26,4 @@ function swap (A, i, j) {
   return A;
 }
 
-console.log(selectionSort([17,5,12,2,20,3,7,1,0]));
+export default selectionSort;

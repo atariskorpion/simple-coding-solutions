@@ -2,7 +2,7 @@
  * Example usage: binarySearchRecursive(array, 42, 0, array.length - 1)
  */
 function binarySearch(array, x) {
-  binarySearchRecursive(array, x, 0, array.length-1);
+  return binarySearchRecursive(array, x, 0, array.length-1);
 }
 function binarySearchRecursive (array, x , left, right) {
   if (left > right) {
@@ -14,12 +14,10 @@ function binarySearchRecursive (array, x , left, right) {
   if (array[mid] === x) {
     return mid;
   } else if (x < array[mid]) {
-    binarySearchRecursive(array, x, left, mid - 1);
+    return binarySearchRecursive(array, x, left, mid - 1);
   } else {
-    binarySearchRecursive(array, x, mid + 1, right);
+    return binarySearchRecursive(array, x, mid + 1, right);
   }
-
-  return -1;
 }
 
 /**
@@ -41,5 +39,8 @@ function binarySearchIterative (array, x) {
     }
   }
 
-  return -1;
+  return false;
 }
+
+export default binarySearch;
+export { binarySearch, binarySearchIterative }

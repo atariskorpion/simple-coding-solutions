@@ -1,4 +1,4 @@
-function quicksort (A, left, right) {
+function quickSort (A, left, right) {
   if (left >= right) {
     return;
   }
@@ -7,8 +7,8 @@ function quicksort (A, left, right) {
   let pivot = A[mid];
   let index = partition(A, left, right, pivot);
   
-  quicksort(A, left, index -1);
-  quicksort(A, index, right);
+  quickSort(A, left, index -1);
+  quickSort(A, index, right);
 
   return A;
 }
@@ -42,5 +42,4 @@ function swap (A, i, j) {
   return A;
 }
 
-const values = [54,26,93,17,77,31,44,55,20];
-console.log(quicksort(values, 0, values.length - 1));
+export default quickSort;

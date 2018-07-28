@@ -18,4 +18,4 @@ const insertionSort = (A = []) => {
   return A;
 }
 
-console.log(insertionSort([17,5,12,2,20,3,7,1,0]));
+export default insertionSort;
